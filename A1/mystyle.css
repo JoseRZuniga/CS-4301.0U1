@@ -31,7 +31,7 @@ li {
     display: inline;
 }
 p{
-    text-align: center;
+    text-align: left;
 }
 .p1{
     font-size: 45px;
@@ -51,7 +51,8 @@ p{
     color: lightcoral;
 }
 strong{
-    font-size: 45px;
+    font-size: 40px;
+    text-align: center;
     font-weight: bold;
     font: arial;
 }
@@ -65,7 +66,6 @@ table, th, td{
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: ivory;
 }
 
 .row{
@@ -90,8 +90,6 @@ table, th, td{
 .content{
     width: 70%;
     float: initial;
-    text-align: center;
-    vertical-align: center;
 }
 
 .footer {

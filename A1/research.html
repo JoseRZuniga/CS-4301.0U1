@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        
+    </head>
+    <title>Research</title>
+    <body>
+        <p id="date"></p>
+        <h1>Homepage</h1>
+        <div class="header">
+        <h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li></li>
+              </ul>
+        </h2>
+        <h6>
+            <p>
+                <strong>Welcome to the Research Tab</strong> 
+            </p>
+        </h6>
+        </div>
+            
+        <div class="content" >
+            <h3 id="h31" >Cyber Security</h3>
+                <p id="p31" hidden>Cyber threats and attacks are increasing in frequency and severity. 
+                                   The MS degree in Cyber Security, Technology and Policy provides the 
+                                   opportunity for both students with prior computer science experience 
+                                   and those coming from nontechnical backgrounds to learn strategic, 
+                                   policy and analytic aspects of cybersecurity. In addition to courses
+                                   in informational systems, computer science and cognitive psychology, 
+                                   this program provides public policy courses regarding privacy, ethics,
+                                   data security and regulations, in relation to cybersecurity.</p>
+                <ol id="ol31" hidden>Possible Research Topics
+                    <ul>
+                        <li>Encryption</li><br>
+                        <li>Decryption</li><br>
+                        <li>Blockchain</li><br>
+                    </ul>
+                </ol>
+                <img id="i31" hidden src='cyber.jpg' width='100px' height='120px' text-align='rigth'>
+            
+            <h3 id="h32">Computer Theory</h3> 
+                <p id="p32" hidden>In theoretical computer science and mathematics, the theory of computation
+                                   is the branch that deals with how efficiently problems can be solved on a 
+                                   model of computation, using an algorithm.</p>
+                <ol id="ol32" hidden>Possible Research Topics
+                    <ul>
+                        <li>Theoretical Mathematics</li><br>
+                        <li>Theory of Computation</li><br>
+                    </ul>
+                </ol>
+                <img id="i32" hidden src='ctheory.jpg' width='100px' height='120px' text-align='rigth'>
+            
+            <h3 id="h33">Computer Systems</h3> 
+                <p id="p33" hidden>The complete computer made up of the CPU, memory and related electronics
+                                   (main cabinet), all the peripheral devices connected to it and its 
+                                   operating system. Computer systems fall into two categories: clients and 
+                                   servers.</p>
+                    <ol id="ol33" hidden>Possible Research Topics
+                        <ul>
+                            <li>CPU</li><br>
+                            <li>GPU</li><br>
+                        </ul>
+                    </ol>
+                <img id="i33" hidden src='csystems.jpg' width='100px' height='120px' text-align='rigth'>
+           
+            <h3 id="h34">Artificial Intellegence/Machine Learning</h3> 
+                <p id="p34" hidden>Artificial intelligence (AI) is the simulation of human intelligence 
+                    processes by machines, especially computer systems. Specific applications of AI 
+                    include expert systems, natural language processing (NLP), speech recognition and 
+                    machine vision.</p>
+                    <ol id="ol34" hidden>Possible Research Topics
+                        <ul>
+                            <li>Reactive Machines</li><br>
+                            <li>Limited Memory</li><br>
+                            <li>Theory of Mind</li><br>
+                        </ul>
+                    </ol>
+                <img id="i34" hidden src='ai.jpg' width='100px' height='120px' text-align='rigth'>
+
+            <h3 id="h35">Software Engineering</h3> 
+                <p id="p35" hidden>Software engineering is the systematic application of engineering 
+                approaches to the development of software. Software engineering 
+                is a branch of computing science.</p>
+                <ol id="ol35" hidden>Possible Research Topics
+                    <ul>
+                        <li>Databases</li><br>
+                        <li>Graphical User Interfaces</li><br>
+                    </ul>
+                </ol>
+            <img id="i35" hidden src='sw.jpg' width='100px' height='120px' text-align='rigth'>
+
+            <h3 id="h36">Network</h3> 
+                <p id="p36" hidden>A computer network is a group of computers that use a set of common 
+                               communication protocols over digital interconnections for the purpose
+                                of sharing resources located on or provided by the network nodes.</p>
+                <ol id="ol36" hidden>Possible Research Topics
+                    <ul>
+                        <li>Management</li><br>
+                        <li>Security</li><br>
+                    </ul>
+                </ol>
+            <img id="i36" hidden src='network.jpg' width='100px' height='120px' text-align='rigth'>
+
+            <h3 id="h37" onclick="myFunction()">Labs</h3> 
+            <p id="register"></p>
+    
+            </div>
+            <br>
+        <script>
+			document.getElementById("register").style.visibility = "hidden"; 
+			var parser, xmlDoc;
+			var text = 
+			"<tab><labs>" +
+            "<lab>This is a Computer System Lab</lab>" +
+            "<director>John Doe</director>" +
+            "<member>Harry James</member>" +
+            "<member>Sarah Packer</member>" +
+            "<member>Tim Hoolland</member>" +
+            "</labs><labs>" +
+            "<lab>This is a Network System Lab</lab>" +
+            "<director>Mary Jane</director>" +
+            "<member>Frank Smith</member>" +
+            "<member>Ella Jones</member>" +
+            "k<member>Sam Beckett</member>" +
+            "</labs><labs>" +
+            "<lab>This is a Machine Learning Lab</lab>" +
+            "<director>Natalie Rain</director>" +
+            "<member>Gary Ho</member>" +
+            "<member>Quinn Kelly</member>" +
+            "<member>Barney Smith</member>" +
+            "</labs></tab>";
+
+			parser = new DOMParser();
+			xmlDoc = parser.parseFromString(text,"text/xml");
+
+			function myFunction() {
+				document.getElementById("register").style.visibility = "visible";
+				var para, num;
+				para = "";
+				num = 0;
+				for (i = 0; i < 3; i++) { 
+					para += "<br>" + 
+					xmlDoc.getElementsByTagName("lab")[i].nodeName + ": " + xmlDoc.getElementsByTagName("lab")[i].childNodes[0].nodeValue +
+					"<br>" +
+					xmlDoc.getElementsByTagName("director")[i].nodeName + ": " + xmlDoc.getElementsByTagName("director")[i].childNodes[0].nodeValue +
+					"<br>" +
+					xmlDoc.getElementsByTagName("member")[i].nodeName + ": " + xmlDoc.getElementsByTagName("member")[num++].childNodes[0].nodeValue +
+                    "<br>" +
+                    xmlDoc.getElementsByTagName("member")[i].nodeName + ": " + xmlDoc.getElementsByTagName("member")[num++].childNodes[0].nodeValue +
+					"<br>" +
+					xmlDoc.getElementsByTagName("member")[i].nodeName + ": " + xmlDoc.getElementsByTagName("member")[num++].childNodes[0].nodeValue +
+					"<br>";
+				}
+				document.getElementById("register").innerHTML = para;
+			}
+        </script>
+        <div class="footer">Jose Rodriguez JPR160230</div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var d = new Date();
+        document.getElementById("date").innerHTML = d;
+
+        $(document).ready(function(){
+            $("#h31").click(function(){
+                $("#p31").toggle();
+                $("#ol31").toggle();
+                $("#i31").toggle();
+            });
+            $("#h32").click(function(){
+                $("#p32").toggle();
+                $("#ol32").toggle();
+                $("#i32").toggle();
+            });
+            $("#h33").click(function(){
+                $("#p33").toggle();
+                $("#ol33").toggle();
+                $("#i33").toggle();
+            });
+            $("#h34").click(function(){
+                $("#p34").toggle();
+                $("#ol34").toggle();
+                $("#i34").toggle();
+            });
+            $("#h35").click(function(){
+                $("#p35").toggle();
+                $("#ol35").toggle();
+                $("#i35").toggle();
+            });
+            $("#h36").click(function(){
+                $("#p36").toggle();
+                $("#ol36").toggle();
+                $("#i36").toggle();
+            });
+            $("#h37").click(function(){
+                $("#register").toggle();
+            });
+        });
+
+    </script>
+</html>

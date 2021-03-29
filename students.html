@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head><meta name="viewport" content="width=device-width"/>
+        <script src="https://unpkg.com/jquery"></script>
+        <script src="https://surveyjs.azureedge.net/1.7.20/survey.jquery.js"></script>
+        <link href="https://surveyjs.azureedge.net/1.7.20/survey.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+    <title>Students</title>
+    <body>
+        <p id="date"></p>
+        <a href="logout.php" class="btn btn-primary">Sign Out of Your Account</a>
+        <h1>Students</h1>
+        <h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="admission.php">Admission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="research.html">Research</a></li>
+              </ul>
+        </h2>
+        </div>
+            
+        <div class="content"> 
+            <p class="p2">Please Complete Form Below:</p>
+        </div>
+
+        <div id="surveyElement" style="display:inline-block;width:100%;"></div>
+        <div id="surveyResult"></div>
+
+        <script type="text/javascript" src="./students.js"></script>
+      
+        <div> </div>
+        <div class="footer">Jose Rodriguez JPR160230</div>        
+    </body>
+    <script>
+        var d = new Date();
+        document.getElementById("date").innerHTML = d;
+
+    </script>
+</html>
